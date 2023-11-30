@@ -1,0 +1,37 @@
+ALGORITHM sentence_read
+VAR
+    length: INTEGER := 0;
+    word_count : INTEGER := 1;
+    vowels : INTEGER := 0;
+    sentence : STRING := 0;
+    nchar : INTEGER :=1
+BEGIN
+    read(sentence);
+    while(sentence[length] <> ".") DO
+    nChar = nChar + 1;
+
+    IF (sentence[length] = " ") THEN
+        word_count = word_count + 1;
+    END_IF
+
+    SWITCH (sentence[length]) DO
+        case "a" : 
+        case "e" :
+        case "i" :
+        case "o" :
+        case "u" :
+        vowels := vowels +1
+        break
+
+    END_SWITCH
+
+    length := length + 1
+
+    END while
+
+    Write(sentence);
+    Write(word_count);
+    Write(vowels);
+    Write(nChar)
+
+END
